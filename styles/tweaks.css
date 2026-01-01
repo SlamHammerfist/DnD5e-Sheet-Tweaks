@@ -1,0 +1,79 @@
+/* --------------------------------------------------------- / 
+/  HIDE SCROLLBARS                                           /
+/ --------------------------------------------------------- */
+
+/* Hide scrollbars globally (Chromium, Safari, Edge) */ 
+.dnd5e2 *::-webkit-scrollbar { 
+  display: none;
+}
+
+/* Hide scrollbars in Firefox */ 
+.dnd5e2 * { 
+  scrollbar-width: none;
+}
+
+/* --------------------------------------------------------- */
+/*  REMOVE FAVORITES FROM SIDEBAR                            */
+/* --------------------------------------------------------- */
+
+.dnd5e2 .sidebar .favorites {
+  display: none !important;
+}
+
+/* --------------------------------------------------------- /
+/  GLOBAL: Tab-body + Tabs                                   /
+/ --------------------------------------------------------- */
+.dnd5e2 .tab-body { 
+  overflow: hidden; 
+}
+
+.dnd5e2 .tab-body > .tab.active, .dnd5e2 .tab {
+  height: 100%; min-height: 0; overflow-y: auto; overflow-x: hidden;
+}
+
+/* --------------------------------------------------------- */
+/*  SHARED: Inventory / Features / Spells container          */
+/* --------------------------------------------------------- */
+
+.dnd5e2 dnd5e-inventory.inventory-element {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.dnd5e2 .items-list.inventory-list,
+.dnd5e2 .items-list.features-list,
+.dnd5e2 .items-list.spells-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* --------------------------------------------------------- */
+/*  COLLAPSE BUTTON                                          */
+/* --------------------------------------------------------- */
+
+.dnd5e2 .header-collapse-toggle {
+  background: none;
+  border: none;
+  padding: 0 4px 0 0;
+  margin: 0;
+  color: var(--color-text-dark-4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: none;
+}
+
+.dnd5e2 .header-collapse-toggle i {
+  transition: transform 0.2s ease;
+}
+
+.dnd5e2 .items-header.header.collapsed .header-collapse-toggle i {
+  transform: rotate(-90deg);
+}
