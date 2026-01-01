@@ -25,7 +25,7 @@ This module adds small UX improvements.
 ## 📦 Installation
 
 ### Option 1: Manual Download
-1. Download the ZIP from [GitHub](https://github.com/SlamHammerfist/dnd-sheet-tweaks/archive/refs/heads/main.zip)
+1. Download the ZIP from [GitHub](https://github.com/SlamHammerfist/DnD5e-Sheet-Tweaks/archive/refs/heads/main.zip)
 2. Extract into your `modules` folder
 
 ### Option 2: Manifest Link
@@ -39,5 +39,6 @@ This module adds small UX improvements.
 ## 🤖 AI Usage
 
 Copilot was used to generate code with extensive input and testing from myself.
+
 
 
