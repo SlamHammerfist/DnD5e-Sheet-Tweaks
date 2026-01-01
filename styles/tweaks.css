@@ -13,22 +13,29 @@
 }
 
 /* --------------------------------------------------------- */
-/*  REMOVE FAVORITES FROM SIDEBAR                            */
+/*  SIDEBAR SCROLL                                           */
 /* --------------------------------------------------------- */
 
-.dnd5e2 .sidebar .favorites {
-  display: none !important;
+.dnd5e2 .sidebar {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 1rem;
+  min-width: 245px
 }
 
-/* --------------------------------------------------------- /
-/  GLOBAL: Tab-body + Tabs                                   /
-/ --------------------------------------------------------- */
+/* ---------------------------------------------------------*/
+/*  GLOBAL: Tab-body + Tabs                                 */
+/* ---------------------------------------------------------*/
 .dnd5e2 .tab-body { 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.dnd5e2 .tab-body > .tab.active, .dnd5e2 .tab {
-  height: 100%; min-height: 0; overflow-y: auto; overflow-x: hidden;
+.dnd5e2 .tab-body,
+.dnd5e2 .tab {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* --------------------------------------------------------- */

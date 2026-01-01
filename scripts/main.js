@@ -6,20 +6,11 @@ import { applyHeaderCollapse } from "./features/headerCollapse.js";
 const OPEN_SHEETS = new Set();
 
 Hooks.once("init", () => {
-
   registerSettings();
 });
 
 Hooks.on("renderCharacterActorSheet", (sheet, html) => {
   OPEN_SHEETS.add(sheet);
-
-  const root = sheet.form;
-
-  requestAnimationFrame(() => {
-    applyLayoutTransform(root);
-
-    sheet._tabs?.primary?.bind(root);
-  });
 
   applyTooltipDisabling(html);
   applyItemNameExpand(html);
