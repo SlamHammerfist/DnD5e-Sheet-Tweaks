@@ -31,7 +31,7 @@ This module adds small UX improvements.
 ### Option 2: Manifest Link
 1. Paste this into FoundryVTT's "Install Module" field:
    ```json
-   https://raw.githubusercontent.com/SlamHammerfist/dnd-sheet-tweaks/refs/heads/main/module.json
+   https://raw.githubusercontent.com/SlamHammerfist/DnD5e-Sheet-Tweaks/refs/heads/main/module.json
 2. Enable Ability Score Generator in your world
 
 ---
@@ -39,4 +39,5 @@ This module adds small UX improvements.
 ## 🤖 AI Usage
 
 Copilot was used to generate code with extensive input and testing from myself.
+
 
