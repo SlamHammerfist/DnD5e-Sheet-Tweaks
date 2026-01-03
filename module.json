@@ -19,9 +19,10 @@
     "styles/tweaks.css"
   ],
   "packs": [],
-  "url": "https://github.com/SlamHammerfist/dnd-sheet-tweaks",
+  "url": "https://github.com/SlamHammerfist/DnD5e-sheet-tweaks",
   "manifest": "https://raw.githubusercontent.com/SlamHammerfist/DnD5e-Sheet-Tweaks/refs/heads/main/module.json",
   "download": "https://github.com/SlamHammerfist/DnD5e-Sheet-Tweaks/archive/refs/heads/main.zip"
 
 }
+
 
