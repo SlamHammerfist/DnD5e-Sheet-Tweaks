@@ -2,7 +2,7 @@
   "id": "dnd-sheet-tweaks",
   "title": "DnD5e Sheet Tweaks",
   "description": "UI and UX improvements for the DnD5e character sheet.",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -24,5 +24,6 @@
   "download": "https://github.com/SlamHammerfist/DnD5e-Sheet-Tweaks/archive/refs/heads/main.zip"
 
 }
+
 
 
