@@ -7,11 +7,12 @@ This module adds small UX improvements.
 
 ## ✨ Features
 
-- Optional tooltip disabling
-- Expandable item names
+- Disable item tooltips
+- Expand item names on click
 - Collapsible inventory headers
-- Scroll fixes for inventory, features, and spells
-- Sidebar favorites removal
+- Containers roll consumables
+- Electrum removal
+All features are toggleable in module settings.
 
 ---
 
@@ -38,7 +39,4 @@ This module adds small UX improvements.
 
 ## 🤖 AI Usage
 
-Copilot was used to generate code with extensive input and testing from myself.
-
-
-
+This module was developed with assistance from Microsoft Copilot, with extensive testing, iteration, and architectural decisions made by the author.

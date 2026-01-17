@@ -1,12 +1,9 @@
 import { getSetting } from "../settings.js";
 
-export function applyItemNameExpand(html) {
+export function applyItemNameExpand(root) {
   if (!getSetting("itemNameExpands")) return;
 
-  const singleExpandMode = getSetting("singleExpandMode");
-  let lastExpandedRow = null;
-
-  const nameBlocks = html.querySelectorAll(".item-name");
+  const nameBlocks = root.querySelectorAll(".item-name");
 
   nameBlocks.forEach(block => {
     block.addEventListener("click", event => {
@@ -14,24 +11,19 @@ export function applyItemNameExpand(html) {
       if (event.target.closest(".item-image")) return;
 
       const action = block.dataset.action;
-      if (action === "activity-use") return;
 
-      if (action === "use") {
-        event.stopImmediatePropagation();
-        event.preventDefault();
+      const isUse = action === "use" || action === "";
 
-        const row = block.closest(".item-row");
-        const expandBtn = row?.querySelector("button[data-action='toggleExpand']");
-        if (!expandBtn) return;
+      if (!isUse) return;
 
-        if (singleExpandMode && lastExpandedRow && lastExpandedRow !== row) {
-          const lastBtn = lastExpandedRow.querySelector("button[data-action='toggleExpand']");
-          if (lastBtn) lastBtn.click();
-        }
+      event.stopImmediatePropagation();
+      event.preventDefault();
 
-        expandBtn.click();
-        lastExpandedRow = row;
-      }
+      const row = block.closest(".item-row");
+      const expandBtn = row?.querySelector("button[data-action='toggleExpand']");
+      if (!expandBtn) return;
+
+      expandBtn.click();
 
     }, true);
   });

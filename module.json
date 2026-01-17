@@ -16,7 +16,7 @@
     "scripts/main.js"
   ],
   "styles": [
-    "styles/tweaks.css"
+    "styles/styles.css"
   ],
   "packs": [],
   "url": "https://github.com/SlamHammerfist/DnD5e-sheet-tweaks",

@@ -1,10 +1,9 @@
 import { getSetting } from "../settings.js";
 
-export function applyTooltipDisabling(html) {
+export function applyTooltipDisabling(root) {
   if (!getSetting("disableItemTooltips")) return;
 
-  html.querySelectorAll(".item-row [data-tooltip]").forEach(el => {
+  root.querySelectorAll("[data-tooltip]").forEach(el => {
     el.removeAttribute("data-tooltip");
-    el.removeAttribute("data-tooltip-class");
   });
 }

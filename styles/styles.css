@@ -1,0 +1,41 @@
+/* --------------------------------------------------------- */
+/*  COLLAPSE BUTTON                                          */
+/* --------------------------------------------------------- */
+
+.dnd5e2 .header-collapse-toggle {
+  background: none;
+  border: none;
+  padding: 0 4px 0 0;
+  margin: 0;
+  color: var(--color-text-dark-4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: none;
+}
+
+.dnd5e2 .header-collapse-toggle i {
+  transition: transform 0.2s ease;
+}
+
+.dnd5e2 .items-header.header.collapsed .header-collapse-toggle i {
+  transform: rotate(-90deg);
+}
+
+/* --------------------------------------------------------- */
+/*  ITEM BUTTON                                              */
+/* --------------------------------------------------------- */
+
+.dnd5e2 .item-browser-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+}

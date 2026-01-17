@@ -1,22 +1,20 @@
-export function applyHeaderCollapse(html) {
-  const headers = html.querySelectorAll(".items-header.header");
+import { getSetting } from "../settings.js";
+
+export function applyHeaderCollapse(root) {
+  if (!getSetting("headerCollapse")) return;
+  const headers = root.querySelectorAll(".items-header.header");
+  if (!headers.length) return;
 
   headers.forEach(header => {
     if (header.dataset.collapseBound) return;
     header.dataset.collapseBound = "true";
 
     let list = header.nextElementSibling;
-    while (
-      list &&
-      !list.classList.contains("item-list") &&
-      !list.classList.contains("conditions-list")
-    ) {
+    while (list && !list.classList.contains("item-list") && !list.classList.contains("conditions-list")) {
       list = list.nextElementSibling;
     }
 
-    if (list && list.classList.contains("conditions-list")) return;
-
-    if (!list || !list.classList.contains("item-list")) return;
+    if (!list || list.classList.contains("conditions-list")) return;
 
     const nameBlock = header.querySelector(".item-name");
     if (!nameBlock) return;
@@ -37,9 +35,9 @@ export function applyHeaderCollapse(html) {
 
     let collapsed = false;
 
-    btn.addEventListener("click", event => {
-      event.stopPropagation();
-      event.preventDefault();
+    btn.addEventListener("click", evt => {
+      evt.preventDefault();
+      evt.stopPropagation();
 
       collapsed = !collapsed;
 
